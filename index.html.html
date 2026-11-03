@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy Policy for Safepass Vault, a password manager with local storage and optional encrypted backups.">
+  <meta name="theme-color" content="#101827">
+  <title>Privacy Policy | Safepass Vault</title>
+  <style>
+    :root { color-scheme: light; --ink:#172033; --muted:#586579; --line:#e4e9f0; --blue:#2457c5; --bg:#f4f7fb; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.7 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif; }
+    header { background:linear-gradient(135deg,#101827,#203b69); color:white; padding:42px 20px 38px; }
+    .head, main, footer { max-width:900px; margin:auto; }
+    .brand { display:flex; align-items:center; gap:13px; }
+    .shield { width:44px; height:44px; display:grid; place-items:center; border-radius:13px; background:#ffffff1a; font-size:25px; }
+    h1 { margin:0; font-size:clamp(27px,5vw,38px); line-height:1.2; }
+    .tag { margin:7px 0 0; color:#d7e3fb; }
+    main { padding:28px 18px 50px; }
+    .updated { color:var(--muted); font-size:14px; margin:0 0 20px; }
+    section { background:white; border:1px solid var(--line); border-radius:14px; padding:22px 24px; margin:15px 0; box-shadow:0 3px 12px #17203308; }
+    h2 { font-size:20px; margin:0 0 10px; line-height:1.35; }
+    p { margin:9px 0; }
+    ul { padding-left:22px; margin:8px 0; }
+    li { margin:5px 0; }
+    a { color:var(--blue); overflow-wrap:anywhere; }
+    .callout { border-left:4px solid var(--blue); background:#f1f5ff; padding:13px 16px; border-radius:8px; margin:14px 0; }
+    code { background:#eef1f6; padding:2px 5px; border-radius:5px; }
+    footer { color:var(--muted); padding:0 18px 32px; font-size:13px; }
+    @media(max-width:600px) { section { padding:18px; } header { padding:32px 18px; } }
+  </style>
+</head>
+<body>
+<header>
+  <div class="head">
+    <div class="brand">
+      <div class="shield" aria-hidden="true">🛡️</div>
+      <div>
+        <h1>Safepass Vault</h1>
+        <div class="tag">Privacy Policy</div>
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+  <p class="updated"><strong>Effective date:</strong> 3 November 2026</p>
+
+  <section>
+    <h2>1. Introduction</h2>
+    <p>This Privacy Policy explains how Safepass Vault ("the App") handles information when you use the app. Safepass Vault is designed to help you store and manage passwords and related login information on your device, with an optional encrypted backup that you can choose to send using your email application.</p>
+    <p>We aim to minimise access to your information. Please read this policy carefully before using the App.</p>
+  </section>
+
+  <section>
+    <h2>2. Information stored in the App</h2>
+    <p>Depending on the features you use, the App may store the following information:</p>
+    <ul>
+      <li>Service or app name, including custom service names;</li>
+      <li>Username, user ID or email address associated with a login;</li>
+      <li>Password and related login credentials;</li>
+      <li>Category, such as Personal, Finance, Work, Social or Entertainment;</li>
+      <li>Website URL, favourite status and notes that you choose to add;</li>
+      <li>Your designated backup email address, if you configure email-restricted backup and restore.</li>
+    </ul>
+    <p>This information is entered by you or generated at your request, for example when you use the password generator. The App's local password database is managed using SQLite through Android Room.</p>
+  </section>
+
+  <section>
+    <h2>3. Where your information is stored</h2>
+    <p>Your vault records are stored locally in the App's private storage area on your Android device. The App also provides an optional backup feature. A backup is created only when you choose to use that feature.</p>
+    <div class="callout"><strong>Important:</strong> The App does not automatically upload your vault to a cloud account. You control whether to create and send a backup, and which email application and destination you use.</div>
+    <p>If you uninstall the App, clear its data, lose your device or otherwise remove its local data, your locally stored vault may be lost. Keep a secure backup if you need to recover your information.</p>
+  </section>
+
+  <section>
+    <h2>4. Encrypted backups and email handling</h2>
+    <ul>
+      <li>When you select the cloud backup option, the App prepares a <code>.safevault</code> backup file.</li>
+      <li>The backup file is encrypted using AES-256-GCM before it is handed to an email application.</li>
+      <li>The App launches the Android email/share intent with the backup attached and the destination pre-addressed to the backup email address you selected during setup.</li>
+      <li>You remain in control of completing or cancelling the email. The email service provider you use handles transmission, delivery and any storage of that email and attachment.</li>
+      <li>The App's restore process checks the email identity information embedded in the backup. A backup associated with a different email identity is rejected by the App's restore check.</li>
+    </ul>
+    <p>Sending a backup through email means that the encrypted attachment may be processed and retained by your email provider and any mail servers involved. Their privacy policies and security practices apply to that processing. Safepass Vault does not control those providers.</p>
+    <p>Keep access to your designated backup email account secure. Do not share your backup file or email account with anyone you do not trust.</p>
+  </section>
+
+  <section>
+    <h2>5. Password protection and security</h2>
+    <p>The App is designed with security controls that include:</p>
+    <ul>
+      <li>Master-password-based key derivation using PBKDF2 with 100,000 iterations;</li>
+      <li>A zero-knowledge design in which vault passwords are present in plaintext in memory only while the vault is unlocked;</li>
+      <li>AES-256-GCM encryption for exported backup files;</li>
+      <li>Android's <code>FLAG_SECURE</code> protection to restrict screenshots, screen recording and task-switcher previews on supported Android versions.</li>
+    </ul>
+    <p>No method of electronic storage or transmission is completely secure. Use a strong, unique master password, keep your Android device and email account protected, and install app and operating-system updates when available.</p>
+  </section>
+
+  <section>
+    <h2>6. How information is used</h2>
+    <p>Information you enter is used to provide the App's password-management features, including saving, organising, searching, displaying and copying your vault entries, generating passwords, and creating or restoring backups when you request those actions.</p>
+    <p>Based on the dependency list supplied for the current build, the app uses AndroidX/Jetpack Compose, Room SQLite, AndroidX Core and Lifecycle, Gson, and Java Cryptography. The supplied dependency audit reports no network activity for these libraries. No Firebase Analytics, Google Analytics, AdMob or third-party cloud-storage SDK is identified in that list.</p>
+    <p>This dependency review is not, by itself, a complete audit of the app's source code, transitive dependencies, manifest or runtime behaviour. The developer should verify the complete build and runtime network behaviour before making an absolute claim that the entire app never connects to the internet. The email application and email provider may use the internet when you choose to send a backup.</p>
+  </section>
+
+  <section>
+    <h2>7. Sharing and disclosure</h2>
+    <p>Safepass Vault does not sell your vault entries. The current dependency list supplied for review does not identify advertising, analytics or third-party cloud-storage SDKs. The listed libraries are reported as having no network activity. This statement is limited to the supplied dependency information and should be checked against the complete app build and runtime behaviour.</p>
+    <p>If you choose to send a backup, the encrypted backup is passed to the email application you select. Your email provider and its infrastructure may process the message and attachment to deliver and store it. This is a user-initiated transfer handled by that separate email service, not automatic vault synchronisation by Safepass Vault. You should review the email provider's privacy policy.</p>
+  </section>
+
+  <section>
+    <h2>8. Data retention and deletion</h2>
+    <p>Your vault data remains in the App's local storage until you delete entries, clear the App's data, uninstall the App, or otherwise remove the data from your device. You can manage and delete individual records within the App where those controls are available.</p>
+    <p>Backup copies that you have emailed may remain in your sent folder, recipient's mailbox, email provider's systems or other locations controlled by those services. To remove those copies, use the deletion controls offered by the relevant email provider and recipients. Safepass Vault cannot delete email copies on your behalf.</p>
+  </section>
+
+  <section>
+    <h2>9. Permissions and device features</h2>
+    <p>The App uses Android features needed to provide its functions, such as local data storage, clipboard copying and the Android email/share intent for a backup that you request. The supplied dependency audit reports no network activity for the listed app libraries. When you choose to send a backup, the selected email application and email provider may require internet access and will handle the transmission. Android may display system permission or app-selection prompts where applicable. The exact permissions can vary by Android version and app release.</p>
+  </section>
+
+  <section>
+    <h2>10. Children's privacy</h2>
+    <p>Safepass Vault is a general-purpose password-management utility and is not designed specifically for children. If you believe a child has provided personal information to the developer, please contact us using the details below so the concern can be reviewed.</p>
+  </section>
+
+  <section>
+    <h2>11. Changes to this Privacy Policy</h2>
+    <p>This policy may be updated when the App's features, data practices or legal requirements change. The revised policy will be published at this same URL with an updated effective date. Please review it periodically.</p>
+  </section>
+
+  <section>
+    <h2>12. Contact</h2>
+    <p>For privacy questions or requests relating to this policy, contact the app developer:</p>
+    <p><strong>Developer:</strong> Smartgen Digital <br>
+       <strong>Privacy contact email:</strong> smartgendigital0@gmail.com </p>
+    <p>Please replace the bracketed details above before publishing this page.</p>
+  </section>
+</main>
+<footer>
+  <div>© 2026 Safepass Vault. All rights reserved.</div>
+  <div>This page is the privacy policy for the Safepass Vault Android application.</div>
+</footer>
+</body>
+</html>
